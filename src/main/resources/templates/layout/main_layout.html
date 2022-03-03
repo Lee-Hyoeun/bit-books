@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head th:replace="fragments/config :: configFragment">
+        <script th:src="@{/plugins/moment/moment.min.js}"></script>
+        <script th:src="@{/plugins/moment/locale/ko.js}"></script>
+        <script th:src="@{/plugins/daterangepicker/daterangepicker.js}"></script>
+    </head>
+    <body class="layout-top-nav" style="height: auto;">
+        <div class="wrapper" >
+            <header th:replace="fragments/header :: headerFragment"></header>
+            <aside class="control-sidebar control-sidebar-dark" style="display: none;"></aside>
+            <div class="wrapper">
+                <div layout:fragment="content" style="background-color: white"></div>
+            </div>
+            <footer th:replace="fragments/footer:: footerFragment"></footer>
+            <div class="control-sidebar-bg"></div>
+        </div>
+    </body>
+</html>

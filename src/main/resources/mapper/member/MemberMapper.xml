@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.books.bitbooks.member.mapper.MemberMapper">
+	
+	<resultMap type="Member" id="memberMap">
+		<id property="userNo" column="user_no" />
+		<result property="userNo" column="user_no" />
+		<result property="userId" column="user_id" />
+		<result property="userPw" column="user_pw" />
+		<result property="userName" column="user_name" />
+		<result property="genre" column="genre" />
+		<result property="coin" column="coin" />
+		<result property="enabled" column="enabled" />
+		<result property="regDate" column="reg_date" />
+		<result property="updDate" column="upd_date" />
+		<collection property="authList" resultMap="auth_map">
+		</collection>
+	</resultMap>
+	
+	<resultMap type="MemberAuth" id="auth_map">
+		<result property="userNo" column="user_no" />
+		<result property="auth" column="auth" />
+	</resultMap>
+	
+	<select id="list" resultType="Member">
+		SELECT user_no,
+			   user_id,
+			   user_pw,
+			   user_name,
+			   (SELECT code_name FROM code_detail WHERE class_code = 'A01') AS genre,
+			   coin,
+			   reg_date
+		FROM member 
+	  	ORDER BY reg_date DESC
+	</select>
+	
+	<select id="getMember" parameterType="java.util.Map" resultType="kr.books.bitbooks.member.vo.MemberVO">
+		SELECT mem.user_no,
+			mem.user_id,
+			user_name,
+			genre,
+			coin,
+			reg_date,
+			upd_date
+		FROM member mem
+		WHERE mem.user_id = #{userId}
+	</select>
+	
+	<select id = "getMemberCoin" parameterType="int" resultType="int">
+		select coin
+		from member
+		where user_no = #{userNo}
+	</select>
+	
+
+	<update id="update">
+		UPDATE member
+		SET user_name = #{userName},
+			job = #{job}
+		WHERE user_no =#{userNo}
+	</update>
+	
+	<insert id="createAuth">
+		INSERT INTO member_auth
+			(
+			user_no,
+			auth
+			)
+		VALUES
+			(#{userNo},
+			@{auth}
+			)	
+	</insert>
+	
+	<delete id="deleteAuth">
+		DELETE FROM member_auth
+		WHERE user_no = #{userNo}
+	</delete>
+	
+	<delete id="delete">
+		DELETE FROM member
+		WHERE user_no = #{userNo}
+	</delete>
+
+	<!-- 업데이트용 -->
+	<update id="updateCoin">
+		UPDATE member
+		SET coin = #{coin}
+		WHERE user_no =#{userNo}
+	</update>
+
+	<insert id="userSignUp" parameterType="kr.books.bitbooks.member.vo.MemberRequest">
+
+		insert into member(user_id, user_pw, user_name, genre)
+		           values(#{userId}, #{userPw}, #{userName}, #{genre})
+	</insert>
+
+</mapper>

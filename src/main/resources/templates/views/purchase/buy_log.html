@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" data-layout-decorate="~{layout/main_layout}">
+<div class="content-wrapper" layout:fragment="content">
+    <link rel="stylesheet" th:href="@{/css/purchase/buy_log.css}">
+    <section>
+        <!-- 제목 -->
+        <table class="titleName">
+            <tr>
+                <td>
+                    <h2>구매 내역</h2>
+                </td>
+            </tr>
+        </table>
+
+        <!-- 메인 테이블 -->
+        
+        <table id="log">
+        	<tbody>
+            <tr>
+                <td style="height: 40px;">번호</td>
+                <td>상품</td>
+                <td>가격</td>
+                <td>구매 수</td>
+                <td>날짜</td>
+                <td>파일</td>
+            </tr>
+            
+        <tr th:each="obj : ${dataList}">
+              <td style="height:40px">
+               <span th:text="${obj.purchaseNo}"></span> <!-- 번호 -->
+              </td>
+              <td>
+                 <a th:href="@{/product/LookProductUser(itemId=${obj.itemId})}"  ><span th:text="${obj.itemName}"></span></a> <!-- 상품 -->
+              </td>
+              <td>
+                 <span th:text="${obj.itemPrice}"></span> <!-- 가격 -->
+              </td>
+                <td>
+                    <span th:text="${obj.purchaseCount}"></span> <!-- 구매 수  -->
+                </td>
+              <td>
+                 <span th:text="${#temporals.format(obj.regDate, 'yyyy-MM-dd HH:mm:ss')}"></span> <!-- 날짜 -->
+              </td>
+                <td>
+                    <a th:href="@{/down/file(fileName=${obj.fileName})}"><span>[down]</span></a>
+               </td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        <!-- 페이징 -->
+        
+        <div th:with ="start = ${paging.pageRangeStart}, end =${paging.pageRangeEnd}">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            
+               <li class="page-item"  th:each="page: ${#numbers.sequence(start, end)}" >
+               		<a class="page-link" href="#" th:onclick="getPage([[${page}]])"> 
+               			<span  th:style="${page == currentPage ? 'font-weight: bold;' : ''}"   th:text="${page}"></span>
+               		</a>
+               </li>
+            
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+     	</div>
+        
+        <script>
+
+		  function getPage(currentPage) {
+			  location.href  = '/purchase/log?currentPage=' + currentPage;
+		  }
+
+		</script>
+
+    </section>
+</div>
+</html>

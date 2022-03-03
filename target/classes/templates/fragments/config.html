@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head th:fragment="configFragment">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>BitsBooks</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- daterange picker -->
+    <link rel="stylesheet" th:href="@{/plugins/daterangepicker/daterangepicker.css}">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" th:href="@{/plugins/icheck-bootstrap/icheck-bootstrap.min.css}">
+
+    <link rel="stylesheet" th:href="@{/plugins/fontawesome-free/css/all.min.css}">
+    <link rel="stylesheet" th:href="@{/plugins/overlayScrollbars/css/OverlayScrollbars.min.css}">
+    <!-- Bootstrap Color Picker -->
+    <link rel="stylesheet" th:href="@{/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css}">
+    <!-- Tempusdominus Bbootstrap 4 -->
+    <link rel="stylesheet" th:href="@{/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css}">
+    <!-- Select2 -->
+    <link rel="stylesheet" th:href="@{/plugins/select2/css/select2.min.css}">
+    <link rel="stylesheet" th:href="@{/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css}">
+    <!-- Bootstrap4 Duallistbox -->
+    <link rel="stylesheet" th:href="@{/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css}">
+    <!-- Theme style -->
+    <link rel="stylesheet" th:href="@{/dist/css/adminlte.min.css}">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script th:src="@{/plugins/jquery/jquery.min.js}"></script>
+    <script th:src="@{/plugins/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/plugins/datatables/jquery.dataTables.min.js}"></script>
+    <script th:src="@{/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js}"></script>
+    <script th:src="@{/plugins/datatables-responsive/js/dataTables.responsive.min.js}"></script>
+    <script th:src="@{/plugins/datatables-responsive/js/responsive.bootstrap4.min.js}"></script>
+    <script th:src="@{/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js}"></script>
+    <script th:src="@{/dist/js/adminlte.min.js}"></script>
+    <script th:src="@{/dist/js/demo.js}"></script>
+    <style>
+        body {
+            font-family: helvetica, meiryo, Malgun Gothic; /* 반드시 영문폰트, 일본어 폰트, 한글 폰트 순서로 */
+        }
+    </style>
+
+    <script>
+        jQuery.browser = {};
+        (function () {
+            jQuery.browser.msie = false;
+            jQuery.browser.version = 0;
+            if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+                jQuery.browser.msie = true;
+                jQuery.browser.version = RegExp.$1;
+            }
+        })();
+
+        function serverUrl(uri){
+            return '${path}/'+uri;
+        }
+
+    </script>
+</head>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" data-layout-decorate="~{layout/main_layout}">
+<div class="content-wrapper" layout:fragment="content">
+    <link rel="stylesheet" th:href="@{/css/notice/noticeboard.css}">
+   <section>
+      <table class="titleName">
+        <tr>
+        	<td>
+            <h1>자유게시판</h1>
+         	 </td>
+
+        </tr>
+      </table>
+       <hr>
+      <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>번호</th>
+              <th>제목</th>
+              <th>작성자</th>
+              <th>날짜</th>
+            </tr>
+          </thead>
+          <thead>
+          <tbody>
+            <tr>
+              <td>2</td>
+              <td>두번째 자유게시글</td>
+              <td>작성자2</td>
+              <td>2022.02.11</td>
+            </tr>
+        </tbody>
+      </table>
+        <tr>
+          <td>
+            <div class="form-group">
+              <textarea class="form-control" id="exampleFormControlTextarea1"
+                placeholder="th:text=${~~}하면 해당 게시글 내용으로 보임~~" rows="3"></textarea>
+            </div>
+          </td>
+          <td>
+   		    <div style="text-align:right">
+           	  <button type="button" class="btn btn-primary">글수정</button>
+              <button type="button" class="btn btn-secondary">글삭제</button>
+              <br>
+			</div>
+          </td>
+        </tr>
+		<br>
+        <hr>
+        <!-- 댓글입력 공간-->
+        <td><h4>comment</h4></td>
+        <tr>
+          <td>
+            <div class="form-group">
+              <textarea class="form-control" id="exampleFormControlTextarea1"
+                placeholder="댓글을 입력해주세요" rows="2"></textarea>
+            <div style="text-align:right"> <button type="button" class="btn btn-primary">댓글등록</button> </div>
+         	<br><br>
+            </div>
+          </td>
+        </tr>
+        
+        <!-- 입력된 댓글 보기 -->
+          <hr>
+          <tr>
+            <th class="commentId">"댓글작성자 아이디"&nbsp;</th>
+            <th class="commentClock"> &nbsp;"작성 일시"</th>
+          </tr>
+            <div class="form-group">
+              <textarea class="form-control" id="exampleFormControlTextarea1"
+                placeholder="어쩌구 저쩌구~~ 댓글" rows="1"></textarea>
+   		    <div style="text-align:right">
+           	  <button type="button" class="btn btn-primary">댓글수정</button>
+              <button type="button" class="btn btn-secondary">댓글삭제</button>
+              <br>
+			</div>
+         
+
+        
+        
+      </div>
+   </section>
+</div>
+</html>

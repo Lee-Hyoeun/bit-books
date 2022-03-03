@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" data-layout-decorate="~{layout/main_layout}">
+<div class="content-wrapper" layout:fragment="content">
+    <link rel="stylesheet" th:href="@{/css/notice/noticeboard.css}">
+     <section>
+      <table class="titleName">
+        <tr>
+          <td>
+            <h1>자유게시판 수정</h1>
+          </td>
+        </tr>
+      </table>
+      <hr>
+      <div class="container">
+                 <div class="form-group">
+                  <textarea class="form-control" id="title"
+                    placeholder="두번쨰 게시글 제목~~" rows="2"></textarea>
+                </div>
+            <div class="form-group">
+              <textarea class="form-control" id="contents"
+                placeholder="두번째 게시글 내용~~" rows="15"></textarea>
+            </div>
+          <div style="text-align:right">
+              <button type="button" class="btn btn-primary">수정완료</button>
+              <button type="button" class="btn btn-secondary">목록보기</button>
+          </div>
+      </div>
+     </section>
+   </div>
+</html>

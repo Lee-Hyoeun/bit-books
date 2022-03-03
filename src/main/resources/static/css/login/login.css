@@ -1,0 +1,33 @@
+#col1 {
+    width: 80px;
+}
+
+input {
+    width: 150px;
+    height: 25px;
+}
+
+button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    padding: 22px 22px;
+    margin-top: 30px;
+    margin-left: 3px;
+    width: 120px;
+    height: 40px;
+    border: 1px solid rgb(31, 140, 230);
+    background-color: rgb(31, 140, 230);
+    font-size: 18px;
+}
+
+h3 {
+    text-align: center;
+}
+
+
+h2 {
+    margin-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+}

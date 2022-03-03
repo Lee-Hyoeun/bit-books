@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" data-layout-decorate="~{layout/main_layout}">
+<div class="content-wrapper" layout:fragment="content">
+    <link rel="stylesheet" th:href="@{/css/notice/noticeboard.css}">
+   <section>
+      <table class="titleName">
+        <tr>
+        	<td>
+            <h1>자유게시판 관리</h1>
+            <br>
+          </td>
+        </tr> 
+      </table>
+      
+      <!-- 검색바 -->
+      <div class="container" >
+        <div class="row">
+          <form method="post" name="search">
+            <table class="pull-right">
+              <tr>
+                <td><select class="form-control" name="searchField">
+                    <option value="title">제목</option>
+                    <option value="userID">작성자</option>
+                    <option value="idTitle">제목+작성자</option>
+                </select></td>
+                <td>&nbsp;</td>
+                <td><input type="text" class="form-control"
+                  placeholder=" " name="searchText" maxlength="100"></td>
+                <td>&nbsp;</td>
+                <td><button type="submit" class="btn btn-primary">검색</button></td>        
+              </tr>
+            </table>
+          </form>
+      </div>
+      </div>
+      <br>
+      
+      <hr>
+      <div class="container">  
+        <table class="table">
+          <thead>
+            <tr>
+              <th>번호</th>
+              <th>제목</th>
+              <th>작성자</th>
+              <th>날짜</th>
+            </tr>
+          </thead>
+          <thead>
+          <tbody>
+            <tr>
+              <td>2</td>
+              <td><a href="#">두번째 자유게시글</a></td>
+              <td>작성자2</td>
+              <td>2022.02.11</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><a href="#">첫번째 자유게시글</a></td>
+              <td>작성자1</td>
+              <td>2022.02.10</td>
+            </tr>
+            
+          </tbody>
+        </thead>
+      </table>
+
+      <br>
+      <div style="text-align:right"><span>
+      <br>
+		<button type="button" class="btn btn-primary">글쓰기</button>
+      </span> </div>
+	<br>
+
+	<br>
+	<br>
+        
+     </section>
+
+        <div>
+        <aria-label="Page navigation example">
+        
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+     </div>
+    <Br>
+        
+   </div>
+</html>

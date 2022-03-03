@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.books.bitbooks.items.mapper.ItemMapper">
+
+
+    <select id="getProductList" parameterType ="java.util.Map" resultType="kr.books.bitbooks.items.vo.ItemResponse" >
+            select item_id,
+                   item_name,
+                   price,
+                   img_url,
+                   description,
+                   code_value,
+                   DATE_FORMAT(released, '%Y-%m-%d') as released
+            from item
+            where code_value =  #{codeValue}
+    </select>
+
+
+    <select id="getProductDetail" parameterType ="java.util.Map" resultType="kr.books.bitbooks.items.vo.ItemResponse" >
+        select item_id,
+               item_name,
+               price,
+               img_url,
+               description,
+               code_value,
+               DATE_FORMAT(released, '%Y-%m-%d') as released
+        from item
+        where item_id = #{itemId}
+    </select>
+
+
+
+</mapper>

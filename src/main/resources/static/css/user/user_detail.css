@@ -1,0 +1,72 @@
+
+h2 {
+    margin-top: 50px;
+    text-align: center;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+   
+}
+
+/*h3, #join{
+    margin: 20px 0 0 30px;*/
+
+#detail {
+    border-top: solid 1px #cccccc;
+    border-bottom: solid 1px #cccccc;
+    padding: 20px;
+    width: 480px;
+    margin: 40px auto;
+}
+
+.cols {
+    padding: 5px;
+}
+
+.cols li {
+    display: inline-block;
+}
+
+.col1 {
+    width: 200px;
+}
+
+.col2 input, select {
+    width: 200px;
+    height: 28px;
+}
+
+.email input {
+    width: 100px;
+    height: 25px;
+}
+
+textarea {
+    width: 328px;
+    height: 100px;
+}
+
+.hello {
+    vertical-align: top;
+}
+
+#buttons {
+    width: 510px;
+    text-align: center;
+    margin:  auto;
+
+}
+
+#buttons button {
+    padding: 8px 20px;
+    margin-top: 20px;
+}
+
+#choice {
+    width: 200px;
+}

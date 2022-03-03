@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" data-layout-decorate="~{layout/main_layout}">
+<div class="content-wrapper" layout:fragment="content">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="stylesheet" th:href="@{/css/user/user_detail.css}">
+
+    <h2>
+        <td colspan="3">회원 상세보기</td>
+    </h2>
+    <form>
+        <div>
+            <ul id="detail">
+                <li>
+                    <ul class="cols">
+                        <li class="col1">아이디</li>
+                        <li class="col2"><input type="text"></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="cols">
+                        <li class="col1">사용자명</li>
+                        <li class="col2"><input type="text"></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul class="cols">
+                        <li class="col1">선호 장르</li>
+                            <select class="custom-select" id="choice">
+                                <option selected>권한 선택</option>
+                                <option value="1">취미</option>
+                                <option value="2">직업</option>
+                                <option value="3">요리</option>
+                                <option value="4">소설</option>
+                                <option value="5">외국어</option>
+                            </select>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul class="cols">
+                        <li class="col1">권한</li>
+                            <select class="custom-select" id="choice">
+                                <option selected>권한 선택</option>
+                                <option value="1">회원</option>
+                                <option value="2">관리자</option>
+                            </select>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+        <div id="buttons">
+            <button type="modify">수정</button>
+            <button type="list">목록</button>
+        </div>
+    </form>
+
+</html>

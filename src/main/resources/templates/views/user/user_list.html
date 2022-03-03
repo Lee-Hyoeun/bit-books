@@ -1,0 +1,179 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" data-layout-decorate="~{layout/main_layout}">
+<div class="content-wrapper" layout:fragment="content">
+<html lang="ko">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" th:href="@{/css/user/user_list.css}">
+
+  <title>회원 목록</title>
+</head>
+
+<body>
+
+  <div>
+    <h3><center>회원 목록</center></h3>
+
+  </div>
+
+  <!-- <div class="text-center">
+    <img src="1.harrypoter1.jpg" class="rounded" alt="...">
+    <img src="2. 위쳐 이성의 목소리.jpg" class="rounded" alt="...">
+    <img src="3. 셜록홈즈 1.jpg" class="rounded" alt="...">
+    <img src="4. 애거서 크리스티 전집 02-그리고 아무도 없었다.jpg" class="rounded" alt="...">
+    <img src="5. 삼국지2.jpg" class="rounded" alt="...">
+  </div> -->
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  <Br>
+  <!-- 
+   <div class="text-center">
+    <img src="1.harrypoter1.jpg" class="rounded" alt="...">
+    <img src="2. 위쳐 이성의 목소리.jpg" class="rounded" alt="...">
+    <img src="3. 셜록홈즈 1.jpg" class="rounded" alt="...">
+    <img src="4. 애거서 크리스티 전집 02-그리고 아무도 없었다.jpg" class="rounded" alt="...">
+    <img src="5. 삼국지2.jpg" class="rounded" alt="...">
+  </div> -->
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+
+  <div class="container">
+    <table class="table table-bordered">
+      <thead class="table-primary">
+          <th scope="col" style="width: 20%; text-align: center;">번호</th>
+          <th scope="col" style="width: 20%; text-align: center;">아이디</th>
+          <th scope="col" style="width: 20%; text-align: center;">사용자명</th>
+          <th scope="col" style="width: 20%; text-align: center;">선호 장르</th>
+          <th scope="col" style="width: 20%; text-align: center;">등록일시</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" style="text-align:center;">1</th>
+          <td scope="row" style="text-align:center;">abc123</td>
+          <td scope="row" style="text-align:center;">홍길동</td>
+          <td scope="row" style="text-align:center;">직업</td>
+          <td scope="row" style="text-align:center;">2022-02-01 10:39:01</td>
+        </tr>
+        <tr>
+          <th scope="row" style="text-align:center;">2</th>
+          <td scope="row" style="text-align:center;">abc123</td>
+          <td scope="row" style="text-align:center;">홍길동</td>
+          <td scope="row" style="text-align:center;">직업</td>
+          <td scope="row" style="text-align:center;">2022-02-01 10:39:01</td>
+        </tr>
+        <tr>
+          <th scope="row" style="text-align:center;">3</th>
+          <td scope="row" style="text-align:center;">abc123</td>
+          <td scope="row" style="text-align:center;">홍길동</td>
+          <td scope="row" style="text-align:center;">직업</td>
+          <td scope="row" style="text-align:center;">2022-02-01 10:39:01</td>
+        </tr>
+        <tr>
+          <th scope="row" style="text-align:center;">4</th>
+          <td scope="row" style="text-align:center;">abc123</td>
+          <td scope="row" style="text-align:center;">홍길동</td>
+          <td scope="row" style="text-align:center;">직업</td>
+          <td scope="row" style="text-align:center;">2022-02-01 10:39:01</td>
+        </tr>
+        <tr>
+          <th scope="row" style="text-align:center;">5</th>
+          <td scope="row" style="text-align:center;">abc123</td>
+          <td scope="row" style="text-align:center;">홍길동</td>
+          <td scope="row" style="text-align:center;">직업</td>
+          <td scope="row" style="text-align:center;">2022-02-01 10:39:01</td>
+        </tr>
+        <tr>
+          <th scope="row" style="text-align:center;">6</th>
+          <td scope="row" style="text-align:center;">abc123</td>
+          <td scope="row" style="text-align:center;">홍길동</td>
+          <td scope="row" style="text-align:center;">직업</td>
+          <td scope="row" style="text-align:center;">2022-02-01 10:39:01</td>
+        </tr>
+        <tr>
+          <th scope="row" style="text-align:center;">7</th>
+          <td scope="row" style="text-align:center;">abc123</td>
+          <td scope="row" style="text-align:center;">홍길동</td>
+          <td scope="row" style="text-align:center;">직업</td>
+          <td scope="row" style="text-align:center;">2022-02-01 10:39:01</td>
+        </tr>
+        <tr>
+          <th scope="row" style="text-align:center;">8</th>
+          <td scope="row" style="text-align:center;">abc123</td>
+          <td scope="row" style="text-align:center;">홍길동</td>
+          <td scope="row" style="text-align:center;">직업</td>
+          <td scope="row" style="text-align:center;">2022-02-01 10:39:01</td>
+        </tr>
+        <tr>
+          <th scope="row" style="text-align:center;">9</th>
+          <td scope="row" style="text-align:center;">abc123</td>
+          <td scope="row" style="text-align:center;">홍길동</td>
+          <td scope="row" style="text-align:center;">직업</td>
+          <td scope="row" style="text-align:center;">2022-02-01 10:39:01</td>
+        </tr>
+        <tr>
+          <th scope="row" style="text-align:center;">10</th>
+          <td scope="row" style="text-align:center;">abc123</td>
+          <td scope="row" style="text-align:center;">홍길동</td>
+          <td scope="row" style="text-align:center;">직업</td>
+          <td scope="row" style="text-align:center;">2022-02-01 10:39:01</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
+<Br>
+<Br>
+
+<nav aria-label="Page navigation example">
+
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+</body>
+
+</div>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" data-layout-decorate="~{layout/main_layout}">
+<div class="content-wrapper" layout:fragment="content">
+    <link rel="stylesheet" th:href="@{/css/notice/noticeboard.css}">
+   <section>
+      <table class="titleName">
+        <tr>
+        	<td>
+            <h1>공지 사항</h1>
+          </td>
+        </tr> 
+      </table>
+      <hr>
+      <div class="container">  
+        <table class="table">
+          <thead>
+            <tr>
+              <th>번호</th>
+              <th>제목</th>
+              <th>날짜</th>
+            </tr>
+          </thead>
+          <thead>
+          <tbody>
+            <tr>
+              <td>2</td>
+              <td><a href="#">두번째 자유게시글</a></td>
+              <td>2022.02.11</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><a href="#">첫번째 자유게시글</a></td>
+              <td>2022.02.10</td>
+            </tr>    
+          </tbody>
+        </thead>
+      </table>
+     <br><br><br>
+    </div>
+	<br><br>    
+     </section>
+
+        <div>
+        <aria-label="Page navigation example">
+        
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+     </div>
+    <Br>
+        
+   </div>
+</html>
