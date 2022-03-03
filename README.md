@@ -1,4 +1,1 @@
-# bit-books
-
-
-# e-book 서점입니다.
+# bit-books 프로젝트 : e-book 서점.
